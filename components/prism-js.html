@@ -1,0 +1,37 @@
+<link rel="import" href="/acodemy.io/bower_components/prism-js/prism-js.html">
+
+<script src="/acodemy.io/bower_components/prism/prism.js"></script>
+<script src="/acodemy.io/bower_components/prism/components/prism-coffeescript.js"></script>
+<script src="/acodemy.io/bower_components/prism/components/prism-bash.js"></script>
+
+<style>
+  prism-js::shadow pre {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+</style>
+
+<script>
+  (function() {
+    // Finds all prism-js markup where the whole content is commented out,
+    // uncomments it, escapes html and passes it through prism-js.inputValue.
+    //
+    // Used, so we can display markup with <!doctype>, <html> and <body> tags.
+    // Browsers might remove extra <html> and <body> tags if they were
+    // not commented out.
+
+    var prisms = document.querySelectorAll('prism-js[language=markup][escape]');
+
+    for (var i = 0; i < prisms.length; i++) {
+      var prism = prisms[i];
+      var content = prism.innerHTML.trim();
+
+      if (content.slice(0, 4) === '<!--' && content.slice(-3) === '-->') {
+        content = content.slice(4, -3).trim();
+        prism.attributes.removeNamedItem('escape');
+        prism.inputValue = he.encode(content);
+        prism.innerHTML = '';
+      }
+    }
+  })();
+</script>

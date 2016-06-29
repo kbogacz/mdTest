@@ -1,0 +1,57 @@
+{% for collection in site.collections %}
+{% assign docs = collection[1].docs | sort: 'order' %}
+{% assign outerloop = forloop %}
+{% assign prev_index = forloop.index | minus: 1 %}
+{% assign next_index = forloop.index | plus: 1 %}
+
+  {% for other_collection in site.collections %}
+    {% if forloop.index == prev_index %}
+      {% assign prev_docs = other_collection[1].docs | sort: 'order' %}
+      {% assign prev_col_doc = prev_docs | last %}
+    {% endif %}
+    {% if forloop.index == next_index %}
+      {% assign next_docs = other_collection[1].docs | sort: 'order' %}
+      {% assign next_col_doc = next_docs | first %}
+    {% endif %}
+  {% endfor %}
+
+  {% for document in docs %}
+    {% if document.url == page.url %}
+      {% assign previous_doc = prev_col_doc %}
+      {% assign next_doc = next_col_doc %}
+
+      {% unless forloop.first %}
+        {% assign previous = forloop.index0 | minus: 1 %}
+        {% assign previous_doc = docs[previous] %}
+      {% endunless %}
+
+      {% unless forloop.last %}
+        {% assign next = forloop.index0 | plus: 1 %}
+        {% assign next_doc = docs[next] %}
+      {% endunless %}
+
+      <ul class="pager">
+        {% if previous_doc %}
+          <li class="previous">
+            <a href="{{ site.basepath }}{{ previous_doc.url }}">&larr; Back</a>
+          </li>
+        {% else %}
+          <li class="previous disabled">
+            <a href="">&larr; Back</a>
+          </li>
+        {% endif %}
+
+        {% if next_doc %}
+          <li class="next">
+            <a href="{{ site.basepath }}{{ next_doc.url }}">Next &rarr;</a>
+          </li>
+        {% else %}
+          <li class="next disabled">
+            <a href="">Next &rarr;</a>
+          </li>
+        {% endif %}
+      </ul>
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
