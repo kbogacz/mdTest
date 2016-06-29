@@ -1,65 +1,15 @@
 <!DOCTYPE html>
-<html prefix="og: http://ogp.me/ns#">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Acodemy.io - {{ page.title }}</title>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-    <!-- Bootstrap -->
-    <link href="{{ site.baseurl }}bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  {% include head.html %}
 
-    <link rel="stylesheet" href="http://acodemy.io/css/style.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}styles/main.css">
-
-    <og:image></og:image>
-    <link rel="image_src" href="http://www.acodemy.io/img/acodemyangularwc.png">
-    <meta property="og:image" content="http://www.acodemy.io/img/acodemyangularwc.png" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
   <body>
-    <div class="header">
-        <div class="container12">
-            <div class="row">
-                <div class="column12">
-                    <center>
-                        <a href="{{ site.baseurl }}">
-                          <img src="http://acodemy.io/img/logo.png" class="logo">
-                        </a>
-                    </center>
-                    <h1>
-                        AngularJS
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          {{ content }}
-        </div>
-        <div class="col-md-3 docs-sidebar">
-          {% include sidebar.html %}
-        </div>
-      </div>
+
+    {% include sidebar.html %}
+
+    <div class="content container">
+      {{ content }}
     </div>
 
-    <script src="{{ site.baseurl }}bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="{{ site.baseurl }}bower_components/webcomponentsjs/webcomponents.min.js"></script>
-
-    <link rel="import" href="{{ site.baseurl }}components/prism-js.html">
-    <link rel="import" href="{{ site.baseurl }}components/source-switcher.html">
-
-    {% include footer.html %}
-    {% include analytics.html %}
   </body>
 </html>

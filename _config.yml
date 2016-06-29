@@ -1,30 +1,26 @@
-name: Acodemy.io - AngularJS
-markdown: kramdown
-highlighter: pygments
-relative_permalinks: false
-repository: https://github.com/10clouds/acodemy.io
-github: [Repository metadata]
-basepath: /mdTest
-baseurl: /mdTest/
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
 
-collections:
-  intro:
-    output: true
-    title: 'Wprowadzenie'
-    permalink: /intro/:path/
-  angular:
-    output: true
-    title: 'AngularJS'
-    permalink: /angular/:path/
-  web_components:
-    output: true
-    title: 'Web Components'
-    permalink: /web-components/:path/
-  apps:
-    output: true
-    title: 'Aplikacje'
-    permalink: /apps/:path/
-  future:
-    output: true
-    title: "What's next"
-    permalink: /future/:path/
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            Hyde
+tagline:          'A Jekyll theme'
+description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+url:              http://hyde.getpoole.com
+baseurl:          /
+
+author:
+  name:           'Mark Otto'
+  url:            https://twitter.com/mdo
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
