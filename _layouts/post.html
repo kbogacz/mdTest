@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="page-header">
+    <h2>
+        {{ page.title }}
+        <small>{{ site.collections[page.collection].title }}</small>
+    </h2>
+</div>
+
+<div class="post">
+{{ content }}
+</div>
+
+{% include nav.html %}

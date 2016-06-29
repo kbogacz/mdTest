@@ -1,0 +1,135 @@
+/* override from acodemy.io styles */
+.container {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+}
+.header {
+  padding-top:0;
+  overflow:hidden;
+}
+
+.page-header {
+    display: block;
+}
+
+.docs-sidebar {
+  margin-top:8px;
+}
+.docs-sidebar h3.page-header {
+  margin-top:31px;
+  margin-bottom:10px;
+  font-size:18px;
+  line-height:26px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.post a {
+  color: #D9534F;
+}
+
+.post img {
+    max-width: 600px;
+}
+
+.post h2 {
+  padding: 20px 0;
+  margin-top: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.post h3 {
+  padding: 5px 0;
+  margin-top: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 24px;
+}
+
+.post blockquote {
+  margin: 20px 0;
+  padding: 20px;
+  border-left: 3px solid #eee;
+  display: block;
+  font-size: 14px;
+}
+
+.post blockquote h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.post blockquote.danger {
+  background-color: #fdf7f7;
+  border-color: #d9534f;
+}
+.post blockquote.danger h4 {
+  color: #d9534f;
+}
+.post blockquote.warning {
+  background-color: #fcf8f2;
+  border-color: #f0ad4e;
+}
+.post blockquote.warning h4 {
+  color: #f0ad4e;
+}
+.post blockquote.info {
+  background-color: #f4f8fa;
+  border-color: #5bc0de;
+}
+.post blockquote.info h4 {
+  color: #5bc0de;
+}
+
+.post blockquote.structure {
+  background-color: #eaf5ee;
+  border-color: #9bcfae;
+}
+
+.post blockquote.structure h4 {
+  color: #9bcfae;
+}
+
+.container .col-md-9 h3 {
+  color: #5bc0de;
+  font-size: 28px;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.container .col-md-9 a{
+  color: #5bc0de;
+}
+.container .col-md-9 p{
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.container prism-js {
+  margin: 20px 0;
+}
+
+footer {
+    padding: 1em;
+    border-top: 1px solid #5bc0de;
+    margin-top: 5em;
+    color: #666;
+    text-align: center;
+}
+
+footer a {
+    color: #5bc0de;
+}
+
+footer {
+    padding: 1em;
+    border-top: 1px solid #5bc0de;
+    margin-top: 5em;
+    color: #666;
+    text-align: center;
+}
+
+footer a {
+    color: #5bc0de;
+}

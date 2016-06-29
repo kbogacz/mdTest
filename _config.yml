@@ -1,0 +1,30 @@
+name: Acodemy.io - AngularJS
+markdown: kramdown
+highlighter: pygments
+relative_permalinks: false
+repository: https://github.com/10clouds/acodemy.io
+github: [Repository metadata]
+basepath: /acodemy.io
+baseurl: /acodemy.io/
+
+collections:
+  intro:
+    output: true
+    title: 'Wprowadzenie'
+    permalink: /intro/:path/
+  angular:
+    output: true
+    title: 'AngularJS'
+    permalink: /angular/:path/
+  web_components:
+    output: true
+    title: 'Web Components'
+    permalink: /web-components/:path/
+  apps:
+    output: true
+    title: 'Aplikacje'
+    permalink: /apps/:path/
+  future:
+    output: true
+    title: "What's next"
+    permalink: /future/:path/
